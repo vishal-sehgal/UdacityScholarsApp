@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -43,10 +44,12 @@ public class MainActivity extends BaseActivity implements QuizzesFragment.OnComp
     AnimatorSet anim1, anim2, anim3, finalSet;
     LinearLayout loadingDots;
     private DrawerLayout drawer;
-    TextView quizzes_count,left_quizzes_count;
+    TextView quizzes_count,left_quizzes_count, app_title;
 
 
     private Vibrator v;
+
+    private Typeface typeface;
 
 
     private DatabaseReference mFirebaseDatabaseReference;
@@ -61,6 +64,9 @@ public class MainActivity extends BaseActivity implements QuizzesFragment.OnComp
         toolbar = findViewById(R.id.toolbarrnav);
         quizzes_count = findViewById(R.id.total_quizzes_count);
         left_quizzes_count = findViewById(R.id.left_quizzes_count);
+        app_title = findViewById(R.id.app_title);
+        typeface = Typeface.createFromAsset(getApplicationContext().getAssets(), "fonts/font_app_title.ttf");
+        app_title.setTypeface(typeface);
 
 
         initProgressBarDots();

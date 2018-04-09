@@ -4,7 +4,7 @@
     android:id="@+id/activity_splash_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splash_background"
+    android:background="@android:color/white"
     android:fitsSystemWindows="true"
     android:gravity="center"
     android:visibility="invisible">
@@ -16,25 +16,24 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:adjustViewBounds="true"
-        android:src="@drawable/ic_picture"
+        android:src="@drawable/udacity_app_logo"
         android:transitionName="logotransition" />
 
-    <!--style="?android:attr/progressBarStyleHorizontal"-->
-    <!--android:indeterminate="true"-->
-    <Button
-        android:id="@+id/starting_next_btn"
+    <TextView
+        android:id="@+id/app_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/app_name"
         android:layout_below="@id/iconsplashscreen"
-        android:layout_centerHorizontal="true"
-        android:text="Next"
-        android:textColor="#ffffff"
-        android:theme="@style/next_button"
-        android:visibility="invisible" />
+        android:gravity="center"
+        android:layout_marginTop="6dp"
+        android:textColor="#000"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_centerInParent="true"/>
 
     <LinearLayout
         android:id="@+id/loading_dots"
-        android:layout_below="@id/iconsplashscreen"
+        android:layout_below="@id/app_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -74,28 +73,5 @@
             android:visibility="invisible" />
     </LinearLayout>
 
-    <ProgressBar
-        android:id="@+id/progressbar_next_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/iconsplashscreen"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        android:visibility="gone" />
-
-    <TextView
-        android:id="@+id/launch_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/starting_next_btn"
-        android:layout_centerHorizontal="true"
-        android:background="#000"
-        android:fontFamily="monospace"
-        android:gravity="center"
-        android:textColor="#ffffff"
-        android:padding="4dp"
-        android:text="Preparing app for first launch"
-        android:textSize="16sp"
-        android:visibility="gone" />
 
 </RelativeLayout>
