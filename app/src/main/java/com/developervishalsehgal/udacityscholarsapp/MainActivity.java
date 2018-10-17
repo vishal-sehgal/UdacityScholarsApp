@@ -38,6 +38,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends BaseActivity implements QuizzesFragment.OnCompleteListener,QuizzesFragment.OnCompleteLeftQuizzes {
 
+    //Layouts & Widgets
     RelativeLayout relativeLayout;
     android.support.v7.widget.Toolbar toolbar;
     View dot1, dot2, dot3;
